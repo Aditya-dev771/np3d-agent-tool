@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "node server.js"
-},
+    "start": "node server.js",
+    "opensea:sync-env": "node scripts/opensea-sync-env.js",
+    "opensea:verify": "node scripts/opensea-verify.js",
+    "opensea:register:dry-run": "node scripts/opensea-register.js --dry-run",
+    "opensea:register": "node scripts/opensea-register.js --yes"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@opensea/tool-sdk": "^0.26.1",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "ethers": "^6.17.0",
