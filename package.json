@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node server.js",
     "opensea:sync-env": "node scripts/opensea-sync-env.js",
     "opensea:verify": "node scripts/opensea-verify.js",
+    "opensea:verify:collection-intel": "node scripts/opensea-verify.js https://np3d-agent-tool-1.onrender.com/.well-known/ai-tool/normie-punk-3d-collection-intel.json",
     "opensea:register:dry-run": "node scripts/opensea-register.js --dry-run",
-    "opensea:register": "node scripts/opensea-register.js --yes"
+    "opensea:register": "node scripts/opensea-register.js --yes",
+    "opensea:register:collection-intel:dry-run": "node scripts/opensea-register-collection-intel.js --dry-run",
+    "opensea:register:collection-intel": "node scripts/opensea-register-collection-intel.js --yes"
   },
   "keywords": [],
   "author": "",
