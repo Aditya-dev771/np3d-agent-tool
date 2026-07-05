@@ -31,9 +31,8 @@ const collectionMaxSupply = Number(process.env.NP3D_MAX_SUPPLY || "4444");
 const collectionIntelGateToolOnchainId =
   process.env.COLLECTION_INTEL_GATE_TOOL_ONCHAIN_ID ||
   process.env.COLLECTION_INTEL_TOOL_ONCHAIN_ID ||
-  process.env.TOOL_ONCHAIN_ID ||
-  "61";
-const collectionIntelToolOnchainId = process.env.COLLECTION_INTEL_TOOL_ONCHAIN_ID;
+  "80";
+const collectionIntelToolOnchainId = process.env.COLLECTION_INTEL_TOOL_ONCHAIN_ID || "80";
 const requestTimeoutMs = Number(process.env.EXTERNAL_REQUEST_TIMEOUT_MS || "5000");
 
 app.use(cors());
