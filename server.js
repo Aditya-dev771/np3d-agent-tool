@@ -161,6 +161,19 @@ const collectionIntelManifest = {
     additionalProperties: true
   },
   creatorAddress: collectionIntelCreatorAddress,
+  access: {
+    logic: "OR",
+    requirements: [
+      {
+        kind: "0xbdf8c428",
+        data: "0x0000000000000000000000008f0fefc6460852866ad978e44d282e687f93650a",
+        label: "Hold any NFT from this collection",
+        links: {
+          opensea: "https://opensea.io/assets/ethereum/0x8f0fEfC6460852866AD978E44D282e687F93650a"
+        }
+      }
+    ]
+  },
   "com.normiepunk3d.chain": {
     name: "Ethereum",
     chainId: 1
