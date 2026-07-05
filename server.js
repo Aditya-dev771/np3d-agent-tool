@@ -9,6 +9,9 @@ const endpoint = process.env.PUBLIC_ENDPOINT || "https://np3d-agent-tool-1.onren
 const creatorAddress = (
   process.env.CREATOR_ADDRESS || "0x0000000000000000000000000000000000000000"
 ).toLowerCase();
+const collectionIntelCreatorAddress = (
+  process.env.COLLECTION_INTEL_CREATOR_ADDRESS || "0x737dc69f85844da1145303f0b85b285ba9674d83"
+).toLowerCase();
 const toolChainId = Number(process.env.TOOL_CHAIN_ID || "1");
 const toolOnchainId = Number(process.env.TOOL_ONCHAIN_ID || "61");
 const toolRegistryAddress =
@@ -157,7 +160,7 @@ const collectionIntelManifest = {
     },
     additionalProperties: true
   },
-  creatorAddress,
+  creatorAddress: collectionIntelCreatorAddress,
   "com.normiepunk3d.chain": {
     name: "Ethereum",
     chainId: 1
@@ -440,7 +443,7 @@ async function installOpenSeaToolRoute() {
         chain: mainnet,
         rpcUrl: ethereumRpcUrl,
         registryAddress: toolRegistryAddress,
-        operatorAddress: creatorAddress
+        operatorAddress: collectionIntelCreatorAddress
       })
     ],
     usageReporting: collectionIntelUsageReporting,
